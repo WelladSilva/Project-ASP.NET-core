@@ -17,7 +17,8 @@ namespace ProjectSalesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Projeto cuja a finalidade colocar em pratica o uso do ASP.NET core";
+            ViewData["email"] = "wellad.dev@outlook.com";
 
             return View();
         }
@@ -25,7 +26,7 @@ namespace ProjectSalesWebMvc.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
+            
             return View();
         }
 
