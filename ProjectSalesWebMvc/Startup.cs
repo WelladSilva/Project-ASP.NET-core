@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ProjectSalesWebMvc.Data;
+using ProjectSalesWebMvc.Services;
 
 namespace ProjectSalesWebMvc
 {
@@ -41,7 +42,7 @@ namespace ProjectSalesWebMvc
                         builder.MigrationsAssembly("ProjectSalesWebMvc")));
 
             services.AddScoped<SeedingService>();
-
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
