@@ -1,0 +1,24 @@
+﻿using ProjectSalesWebMvc.Data;
+using ProjectSalesWebMvc.Models.Classe;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ProjectSalesWebMvc.Services
+{
+    public class DepartmentService
+    {
+        private readonly ProjectSalesWebMvcContext _context;
+
+        public DepartmentService (ProjectSalesWebMvcContext context)
+        {
+            _context = context;
+        }
+
+        public List<Department> FindAll()
+        {
+            return _context.Department.OrderBy(x => x.Name).ToList();
+        }
+    }
+}
